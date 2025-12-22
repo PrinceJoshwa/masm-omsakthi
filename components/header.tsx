@@ -380,7 +380,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             {/* CTA Button */}
             {/* <Link href="/donate-us" className="hidden sm:block"> */}
-            <Link href="https://aspwct.omsakthiamma.in/" className="hidden sm:block">
+            <Link href="https://donations.acmectrust.org/donate-category" className="hidden sm:block">
               <Button className="bg-[#a7150b] text-white hover:bg-[#8a0d08] rounded-full font-black shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <Heart className="w-4 h-4 mr-2 fill-current" />
                 Donate
