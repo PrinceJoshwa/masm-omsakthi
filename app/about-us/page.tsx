@@ -323,7 +323,7 @@
 //                The Trust
 //             </motion.h1>
 //             <motion.p variants={fadeInUp} className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
-//               Adhiparasakthi Charitable Medical, Educational, and Cultural Trust (ASPWCT Trust)
+//               Adhiparasakthi Siddhar Peedam Women's Charitable Trust (ASPWCT) 
 //             </motion.p>
 //           </motion.div>
 //         </div>
@@ -347,7 +347,7 @@
 //                 </h2>
 //                 <div className="space-y-6 text-slate-600 text-lg leading-relaxed text-justify">
 //                    <p>
-//                       Adhiparasakthi Charitable Medical, Educational, and Cultural Trust (ASPWCT Trust) was established in 1978 by His Holiness Bangaru Adigalar with a modest corpus fund and a few cents of land in Melmaruvathur, Tamil Nadu.
+//                       Adhiparasakthi Siddhar Peedam Women's Charitable Trust (ASPWCT)  was established in 1978 by His Holiness Bangaru Adigalar with a modest corpus fund and a few cents of land in Melmaruvathur, Tamil Nadu.
 //                    </p>
 //                    <p>
 //                       Initially a small village located 92 km from Chennai and 70 km from Pondicherry, Melmaruvathur has grown significantly, thanks in large part to the Trust’s efforts. ASPWCT Trust is a non-profit organization dedicated to serving the community through various charitable, medical, educational, and cultural initiatives.
@@ -682,7 +682,7 @@ export default function AboutUsPage() {
                The Trust
             </motion.h1>
             <motion.p variants={fadeInUp} className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
-              Adhiparasakthi Charitable Medical, Educational, and Cultural Trust (ASPWCT Trust)
+              Adhiparasakthi Siddhar Peedam Women's Charitable Trust (ASPWCT) 
             </motion.p>
           </motion.div>
         </div>
@@ -703,7 +703,7 @@ export default function AboutUsPage() {
                    <h2 className="text-3xl font-serif font-bold text-[#1a1a1a]">About The Trust</h2>
                 </div>
                 <p>
-                   Adhiparasakthi Charitable Medical, Educational, and Cultural Trust (ASPWCT Trust) was established in 1978 by His Holiness Bangaru Adigalar with a modest corpus fund and a few cents of land in Melmaruvathur, Tamil Nadu.
+                   Adhiparasakthi Siddhar Peedam Women's Charitable Trust (ASPWCT)  was established in 1978 by His Holiness Bangaru Adigalar with a modest corpus fund and a few cents of land in Melmaruvathur, Tamil Nadu.
                 </p>
                 <p>
                    Initially a small village located 92 km from Chennai and 70 km from Pondicherry, Melmaruvathur has grown significantly, thanks in large part to the Trust’s efforts. ASPWCT Trust is a non-profit organization dedicated to serving the community through various charitable, medical, educational, and cultural initiatives.
