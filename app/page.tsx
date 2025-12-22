@@ -2160,7 +2160,7 @@ function Donation() {
           </div>
 
           {/* DONATION CARDS */}
-          <div className="grid md:grid-cols-2 gap-8 items-stretch mb-16 md:mb-20">
+          <div className="grid md:grid-cols-1 gap-8 items-stretch mb-16 md:mb-20">
 
             {/* DOMESTIC */}
             <motion.div
@@ -2220,44 +2220,6 @@ function Donation() {
             </motion.div>
 
             {/* FOREIGN */}
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="bg-foreground rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl relative flex flex-col text-background"
-            >
-              <div className="absolute top-0 left-0 w-full h-2 bg-[#ffc107]" />
-
-              <div className="flex items-start gap-4 mb-6">
-                <div className="p-4 bg-white/10 rounded-2xl text-[#ffc107] shrink-0">
-                  <Globe className="w-8 h-8" />
-                </div>
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-bold">Foreign Donors</h3>
-                  <span className="text-xs sm:text-sm font-medium text-foreground bg-[#ffc107] px-3 py-1 rounded-full">
-                    FCRA Approved
-                  </span>
-                </div>
-              </div>
-
-              <ul className="space-y-3 mb-8 flex-1 text-sm sm:text-base">
-                {[
-                  "Government Approved FCRA",
-                  "International Wire Transfer",
-                  "SWIFT Transfer Support",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-background/80">
-                    <CheckCircle2 className="w-5 h-5 text-[#ffc107] shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Button
-                onClick={() => setIsOverseasModalOpen(true)}
-                className="w-full bg-[#ffc107] hover:bg-[#e6ac00] text-foreground font-bold h-14 text-base sm:text-lg rounded-xl shadow-md transition-all hover:scale-[1.02]"
-              >
-                View Overseas Donation Procedure
-              </Button>
-            </motion.div>
           </div>
 
           {/* CERTIFICATES */}
@@ -2290,37 +2252,7 @@ function Donation() {
             </div>
 
             {/* FCRA */}
-            <div className="bg-slate-900 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-lg text-white relative">
-              <div className="absolute top-0 left-0 w-full h-2 bg-[#ffc107]" />
-
-              <div className="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
-                <Globe className="w-6 h-6 text-[#ffc107]" />
-                <h3 className="text-lg sm:text-xl font-bold">FCRA Certificate (Foreign)</h3>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-8">
-                {[1, 2].map((page) => (
-                  <div key={page} className="space-y-3">
-                    <p className="text-sm text-center text-white/60 font-medium">
-                      Page {page.toString().padStart(2, "0")}
-                    </p>
-                    <div className="rounded-xl overflow-hidden border border-white/20 shadow-lg bg-white">
-                      <Image
-                        src={
-                          page === 1
-                            ? "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1766133511/Renewal-Certificate-_ACMEC_TRUST_FCRA_page-0001_nw5ao7.jpg"
-                            : "https://res.cloudinary.com/dsj3kcbf4/image/upload/v1766133704/Renewal-Certificate-_ACMEC_TRUST_FCRA_page-0002_vth9g7.jpg"
-                        }
-                        alt={`FCRA Page ${page}`}
-                        width={600}
-                        height={800}
-                        className="w-full h-auto"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>
