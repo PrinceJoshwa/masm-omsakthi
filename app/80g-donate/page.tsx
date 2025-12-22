@@ -605,7 +605,7 @@ export default function DonatePage() {
                            <div className="space-y-4">
                               <div className="p-4 bg-white rounded-lg border border-stone-200">
                                  <p className="text-xs text-slate-500 uppercase tracking-widest mb-1 font-bold">Account Name</p>
-                                 <p className="text-base font-bold text-[#1a1a1a] leading-snug">Adhiparasakthi Charitable Medical Educational and Cultural Trust</p>
+                                 <p className="text-base font-bold text-[#1a1a1a] leading-snug">Adhiparasakthi Siddhar Peedam Women's Charitable Trust</p>
                               </div>
                               <div className="p-4 bg-white rounded-lg border border-stone-200">
                                  <p className="text-xs text-slate-500 uppercase tracking-widest mb-1 font-bold">Account Number</p>

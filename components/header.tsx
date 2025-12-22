@@ -7,13 +7,14 @@
 // // import { Menu, X, Heart } from "lucide-react"
 // // import { Button } from "@/components/ui/button"
 
+// // // Updated Menu Items based on your request
 // // const navItems = [
 // //   { label: "Home", href: "/" },
-// //   { label: "About Us", href: "/about-us" },
-// //   { label: "Organisation", href: "/organisation" },
-// //   { label: "Trust Activities", href: "/trust-activities" },
+// //   { label: "About the trust", href: "/about-us" },
+// //   { label: "80G", href: "/80g" },
+// //   { label: "CSR", href: "/csr" },
 // //   { label: "Educational Institution", href: "/educational-institution" },
-// //   { label: "Donate Us", href: "/donate-us" },
+// //   // { label: "Donate", href: "/donate-us" },
 // // ]
 
 // // export default function Header() {
@@ -77,6 +78,7 @@
 
 // //           {/* Right Side Buttons */}
 // //           <div className="flex items-center gap-3">
+// //             {/* CTA Button - kept as 'Donate' for visibility, though it is also in the menu now */}
 // //             <Link href="/donate-us" className="hidden sm:block">
 // //               <Button className="bg-[#a7150b] text-white hover:bg-[#8a0d08] rounded-full font-black shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
 // //                 <Heart className="w-4 h-4 mr-2 fill-current" />
@@ -115,6 +117,7 @@
 // //                   {item.label}
 // //                 </Link>
 // //               ))}
+// //               {/* Mobile CTA Button */}
 // //               <Link
 // //                 href="/donate-us"
 // //                 className="block px-4 py-3 font-black text-white bg-[#a7150b] hover:bg-[#8a0d08] rounded-lg text-center mt-2 transition-colors duration-300"
@@ -136,15 +139,16 @@
 // import { useState, useEffect } from "react"
 // import Link from "next/link"
 // import Image from "next/image"
+// import { usePathname } from "next/navigation" // Added for active state
 // import { motion, AnimatePresence } from "framer-motion"
 // import { Menu, X, Heart } from "lucide-react"
 // import { Button } from "@/components/ui/button"
 
-// // Updated Menu Items based on your request
+// // Updated Menu Items
 // const navItems = [
 //   { label: "Home", href: "/" },
 //   { label: "About the trust", href: "/about-us" },
-//   { label: "80G", href: "/80g" },
+//   { label: "Donate", href: "/80g-donate" },
 //   { label: "CSR", href: "/csr" },
 //   { label: "Educational Institution", href: "/educational-institution" },
 //   // { label: "Donate", href: "/donate-us" },
@@ -153,6 +157,7 @@
 // export default function Header() {
 //   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 //   const [scrolled, setScrolled] = useState(false)
+//   const pathname = usePathname() // Hook to get current path
 
 //   useEffect(() => {
 //     const handleScroll = () => {
@@ -198,20 +203,28 @@
 
 //           {/* Desktop Nav */}
 //           <nav className="hidden lg:flex items-center gap-1 bg-black/10 p-1.5 rounded-full">
-//             {navItems.map((item) => (
-//               <Link
-//                 key={item.label}
-//                 href={item.href}
-//                 className="px-5 py-2.5 rounded-full text-sm font-black transition-all duration-300 text-[#1a1a1a] hover:bg-white hover:text-[#a7150b] hover:shadow-md hover:scale-105"
-//               >
-//                 {item.label}
-//               </Link>
-//             ))}
+//             {navItems.map((item) => {
+//               const isActive = pathname === item.href
+              
+//               return (
+//                 <Link
+//                   key={item.label}
+//                   href={item.href}
+//                   className={`px-5 py-2.5 rounded-full text-sm font-black transition-all duration-300 hover:scale-105 ${
+//                     isActive 
+//                       ? "bg-white text-[#a7150b] shadow-md" // Active Style
+//                       : "text-[#1a1a1a] hover:bg-white hover:text-[#a7150b] hover:shadow-md" // Default Style
+//                   }`}
+//                 >
+//                   {item.label}
+//                 </Link>
+//               )
+//             })}
 //           </nav>
 
 //           {/* Right Side Buttons */}
 //           <div className="flex items-center gap-3">
-//             {/* CTA Button - kept as 'Donate' for visibility, though it is also in the menu now */}
+//             {/* CTA Button */}
 //             <Link href="/donate-us" className="hidden sm:block">
 //               <Button className="bg-[#a7150b] text-white hover:bg-[#8a0d08] rounded-full font-black shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
 //                 <Heart className="w-4 h-4 mr-2 fill-current" />
@@ -240,16 +253,23 @@
 //             className="lg:hidden bg-white border-t-4 border-[#1a1a1a] overflow-hidden shadow-2xl"
 //           >
 //             <nav className="flex flex-col p-4 space-y-1">
-//               {navItems.map((item) => (
-//                 <Link
-//                   key={item.label}
-//                   href={item.href}
-//                   className="block px-4 py-3 font-black text-gray-800 hover:text-[#a7150b] hover:bg-[#ffc107]/10 rounded-lg transition-all duration-300"
-//                   onClick={() => setMobileMenuOpen(false)}
-//                 >
-//                   {item.label}
-//                 </Link>
-//               ))}
+//               {navItems.map((item) => {
+//                  const isActive = pathname === item.href
+//                  return (
+//                   <Link
+//                     key={item.label}
+//                     href={item.href}
+//                     className={`block px-4 py-3 font-black rounded-lg transition-all duration-300 ${
+//                        isActive 
+//                        ? "bg-[#ffc107]/20 text-[#a7150b]" // Active Mobile Style
+//                        : "text-gray-800 hover:text-[#a7150b] hover:bg-[#ffc107]/10"
+//                     }`}
+//                     onClick={() => setMobileMenuOpen(false)}
+//                   >
+//                     {item.label}
+//                   </Link>
+//                  )
+//               })}
 //               {/* Mobile CTA Button */}
 //               <Link
 //                 href="/donate-us"
@@ -282,7 +302,8 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "About the trust", href: "/about-us" },
   { label: "Donate", href: "/80g-donate" },
-  { label: "CSR", href: "/csr" },
+  { label: "CSR Donation", href: "/csr" },
+  { label: "FCRA", href: "/fcra" },
   { label: "Educational Institution", href: "/educational-institution" },
   // { label: "Donate", href: "/donate-us" },
 ]
@@ -317,7 +338,7 @@ export default function Header() {
             >
               <Image
                 src="https://res.cloudinary.com/dsj3kcbf4/image/upload/v1764939097/logo_dl1zqj.png"
-                alt="ASPWCT Trust Logo"
+                alt="aspwc Trust Logo"
                 fill
                 className="object-contain p-1"
                 sizes="(max-width: 768px) 48px, 56px"
@@ -358,7 +379,8 @@ export default function Header() {
           {/* Right Side Buttons */}
           <div className="flex items-center gap-3">
             {/* CTA Button */}
-            <Link href="/donate-us" className="hidden sm:block">
+            {/* <Link href="/donate-us" className="hidden sm:block"> */}
+            <Link href="https://aspwct.omsakthiamma.in/" className="hidden sm:block">
               <Button className="bg-[#a7150b] text-white hover:bg-[#8a0d08] rounded-full font-black shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <Heart className="w-4 h-4 mr-2 fill-current" />
                 Donate
