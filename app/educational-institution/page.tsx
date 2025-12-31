@@ -1299,7 +1299,7 @@ const socialEvents = [
     { date: "26-11-2023", event: "National Constitution Day E-Quiz" },
     { date: "11-12-2023", event: "Viksit Bharat at 2047: Voice of Youth" },
     { date: "13-12-2023", event: "Naan Mudhalvan Niral Thiruvizha" },
-    { date: "23-24", event: "One day Training for Student Mentors" },
+   //  { date: "23-24", event: "One day Training for Student Mentors" },
     { date: "27-12-2023", event: "Quiz Competition on 'Consumer Rights and Protection'" },
     { date: "28-12-2023", event: "Model Consumer Court & Short Film on Consumer Protection" },
     { date: "26-01-2024", event: "75th Republic Day Celebration" },
