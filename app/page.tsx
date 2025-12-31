@@ -3925,12 +3925,12 @@ function CsrRegistration() {
             
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">Registration Number</p>
+                <p className="text-xs text-gray-300 uppercase tracking-widest mb-1">Registration Number</p>
                 <p className="text-2xl font-mono font-bold text-[#ffc107]">CSR00002407</p>
               </div>
               <div className="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">Date of Registration</p>
-                <p className="text-xl font-bold">16-04-2021</p>
+                <p className="text-xs text-gray-300 uppercase tracking-widest mb-1">Date of Registration</p>
+                <p className="text-xl font-bold text-white">16-04-2021</p>
               </div>
             </div>
           </motion.div>
