@@ -2175,15 +2175,15 @@ export default function DonatePage() {
       </section>
 
       {/* Donate CTA */}
-      <section className="py-24 bg-gradient-to-br from-[#ffc107] to-[#ffb300]">
+      <section className="py-24 bg-[#a7150b]">
           <div className="container mx-auto px-4 text-center max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-6 tracking-tight">Ready to Make a Difference?</h2>
-            <p className="text-[#1a1a1a]/80 leading-relaxed mb-10 text-lg">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">Ready to Make a Difference?</h2>
+            <p className="text-white/80 leading-relaxed mb-10 text-lg">
                 Your donation helps us serve communities through healthcare, education, and cultural preservation. All donations are eligible for 80G tax benefits.
             </p>
             <Link href="https://aspwct.omsakthiamma.in/">
-                <Button className="bg-[#a7150b] hover:bg-[#8a0d08] text-white text-lg px-10 py-6 rounded-full shadow-2xl transition-transform hover:scale-105">
-                  <Heart className="w-5 h-5 mr-2 fill-current" /> Donate Now
+                <Button className="bg-gradient-to-br from-[#ffc107] to-[#ffb300]  hover:bg-[#8a0d08] text-black text-lg px-10 py-6 rounded-full shadow-2xl transition-transform hover:scale-105">
+                  <Heart className="w-5 h-5 mr-2 fill-current text-black" /> Donate Now
                 </Button>
             </Link>
           </div>

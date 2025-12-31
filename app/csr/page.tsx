@@ -467,7 +467,9 @@ import {
    X,
    FileText,
    Phone,
-   Clock
+   Clock,
+   Sprout,
+   Trash2
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -617,6 +619,42 @@ export default function CSRPage() {
             </div>
          </section>
 
+                  {/* ================= ACTIVITIES & ENVIRONMENTAL ================= */}
+         <section className="py-24 bg-slate-50">
+            <div className="container mx-auto px-4">
+               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="text-center mb-16">
+                  <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900">Environment Friendly Initiatives</h2>
+               </motion.div>
+
+               <div className="grid md:grid-cols-2 gap-8 mb-4">
+                   <Card className="p-8 border-none shadow-md bg-white rounded-3xl">
+                       <div className="flex items-center gap-4 mb-4">
+                           <div className="p-3 bg-green-100 rounded-xl text-green-700"><Sprout className="w-8 h-8"/></div>
+                           <h3 className="text-xl font-bold">One Crore Palm Seeds Plantation</h3>
+                       </div>
+                       <p className="text-slate-600 mb-4 text-sm leading-relaxed">
+                           On 1st October 2023, Tamilnadu Palm Workers Welfare Board, Green Needa Environment and State NSS organized a programme to plant one crore palm seeds at 430 places. A certificate of appreciation was awarded to Lakshmi Bangaru College of Arts and Science.
+                       </p>
+                   </Card>
+
+                   <Card className="p-8 border-none shadow-md bg-white rounded-3xl">
+                       <div className="flex items-center gap-4 mb-4">
+                           <div className="p-3 bg-blue-100 rounded-xl text-blue-700"><Trash2 className="w-8 h-8"/></div>
+                           <h3 className="text-xl font-bold">Cleanliness Drive</h3>
+                       </div>
+                       <p className="text-slate-600 mb-4 text-sm leading-relaxed">
+                           The college conducted several programs in partnership with Government departments including:
+                       </p>
+                       <ul className="text-sm font-semibold text-slate-700 space-y-2">
+                           <li>• Village Cleanliness drive</li>
+                           <li>• Plastic eradication rally</li>
+                           <li>• Clean India (Swach Bharath) Programme</li>
+                       </ul>
+                   </Card>
+               </div>
+            </div>
+         </section>
+         
          {/* ================= ACTIVITIES SECTION ================= */}
          <section className="py-24 bg-slate-50">
             <div className="container mx-auto px-4">
