@@ -49,9 +49,9 @@ export default function Footer() {
             <ul className="flex flex-col space-y-3 text-sm font-medium">
               <li><Link href="/" className="hover:text-[#750A0A] transition-colors">Home</Link></li>
               <li><Link href="/about-us" className="hover:text-[#750A0A] transition-colors">About Us</Link></li>
-              <li><Link href="/csr" className="hover:text-[#750A0A] transition-colors">CSR</Link></li>
+              {/* <li><Link href="/csr" className="hover:text-[#750A0A] transition-colors">CSR</Link></li> */}
               <li><Link href="/educational-institution" className="hover:text-[#750A0A] transition-colors">Educational Institution</Link></li>
-              <li><Link href="https://aspwct.omsakthiamma.in/" target="_blank" rel="noopener noreferrer" className="hover:text-[#750A0A] transition-colors">Donate</Link></li>
+              <li><Link href="https://masm.omsakthiamma.in/" target="_blank" rel="noopener noreferrer" className="hover:text-[#750A0A] transition-colors">Donate</Link></li>
             </ul>
           </div>
 
