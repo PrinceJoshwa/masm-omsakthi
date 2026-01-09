@@ -26,7 +26,7 @@ export default function Footer() {
                 />
               </div>
               <div>
-                <h2 className="text-[#750A0A] font-bold text-lg leading-tight">ASPWC Trust</h2>
+                <h2 className="text-[#750A0A] font-bold text-lg leading-tight">MASM</h2>
                 <p className="text-xs opacity-80 text-[#1a1a1a]">Adhiparasakthi</p>
               </div>
             </div>
