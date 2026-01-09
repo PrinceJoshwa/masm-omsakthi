@@ -74,7 +74,7 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#750A0A] shrink-0 mt-0.5" />
                 <p className="leading-relaxed opacity-90">
-                  No.1 GST Road, Adhiparasakthi Siddhar Peeda, <br/>
+                  No.1 GST Road, Melmaruvathur Adhiparasakthi Spiritual Movement, <br/>
                   Melmaruvathur - 603319, <br/>
                   TamilNadu, India
                 </p>
@@ -89,8 +89,8 @@ export default function Footer() {
 
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#750A0A] shrink-0" />
-                <a href="mailto:info@acmectrust.org" className="hover:text-[#750A0A] transition-colors">
-                  info@acmectrust.org
+                <a href="mailto:masm.mmr@gmail.com" className="hover:text-[#750A0A] transition-colors">
+                  masm.mmr@gmail.com
                 </a>
               </div>
             </div>
