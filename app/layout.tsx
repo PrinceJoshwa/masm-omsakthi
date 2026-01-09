@@ -47,7 +47,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "ASPWCT Trust - Adhiparasakthi Charitable Medical Educational Cultural Trust",
+  title: "MASM - Adhiparasakthi Charitable Medical Educational Cultural Trust",
   description:
     "Empowering communities through healthcare, education, and cultural preservation. Serving humanity with compassion and dedication.",
   // icons: {

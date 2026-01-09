@@ -145,7 +145,7 @@ export default function DonateUs() {
                 <div className="space-y-3 bg-gray-50 p-4 rounded-lg">
                   <div>
                     <p className="text-sm text-gray-500">Account Name</p>
-                    <p className="font-bold text-[#1a1a1a]">ASPWCT Trust</p>
+                    <p className="font-bold text-[#1a1a1a]">MASM</p>
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Account Number</p>
@@ -178,7 +178,7 @@ export default function DonateUs() {
             <Shield className="w-16 h-16 mx-auto mb-6 text-[#1a1a1a]" />
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1a1a1a] mb-6">Tax Benefits</h2>
             <p className="text-[#1a1a1a]/80 text-lg max-w-3xl mx-auto mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. All donations to ASPWCT Trust are eligible for tax
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. All donations to MASM are eligible for tax
               deduction under Section 80G of the Income Tax Act, 1961.
             </p>
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -274,7 +274,7 @@ export default function DonateUs() {
               {
                 name: "Rajesh Kumar",
                 quote:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proud to support such a noble cause. The transparency and dedication of ASPWCT Trust is commendable.",
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proud to support such a noble cause. The transparency and dedication of MASM is commendable.",
                 location: "Chennai",
               },
               {
