@@ -565,7 +565,7 @@ function ContactForm() {
                         Email Us
                       </p>
                       <p className="font-medium text-sm break-all text-gray-300">
-                        contact@masm.org
+                        masm@omsakthiamma.org
                       </p>
                     </div>
                   </div>               

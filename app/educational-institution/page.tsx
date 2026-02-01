@@ -613,7 +613,7 @@ const institutions = [
       description: "Skill development programs are offered to empower underprivileged youth, alongside scholarships and financial aid for deserving students.",
       address: ["Melmaruvathur and surrounding villages"],
       phone: "N/A",
-      email: "contact@masm.org",
+      email: "masm@omsakthiamma.org",
       website: "#",
       icon: Lightbulb,
       color: "text-orange-600",
