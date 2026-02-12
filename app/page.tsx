@@ -475,15 +475,192 @@ function DonationAndCorpus() {
 }
 
 // ========== CONTACT FORM ==========
+// function ContactForm() {
+//   const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success">("idle")
+
+// const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+//   e.preventDefault()
+//   setFormStatus("submitting")
+
+//   const form = e.currentTarget
+//   const formData = new FormData(form)
+
+//   try {
+//     const response = await fetch("https://formspree.io/f/mbdarayj", {
+//       method: "POST",
+//       body: formData,
+//       headers: {
+//         Accept: "application/json",
+//       },
+//     })
+
+//     if (response.ok) {
+//       setFormStatus("success")
+//       form.reset()
+//     } else {
+//       setFormStatus("idle")
+//       alert("Something went wrong!")
+//     }
+//   } catch (error) {
+//     console.error(error)
+//     setFormStatus("idle")
+//     alert("Network error!")
+//   }
+// }
+
+
+//   return (
+//     <section className="py-12 md:py-24 px-4 bg-[#a7150b] relative">
+//       <div className="container mx-auto max-w-5xl relative z-10">
+//         <Card className="border-none shadow-2xl rounded-3xl overflow-hidden bg-white">
+//           <div className="grid grid-cols-1 md:grid-cols-5">
+//             {/* Form Side */}
+//             <div className="md:col-span-3 p-6 md:p-12">
+//               <div className="mb-6 md:mb-8">
+//                 <h3 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 tracking-tight">Contact Us</h3>
+//                 <p className="text-sm md:text-base text-gray-500 mt-2">Reach out for information on rituals, education, or donations.</p>
+//               </div>
+
+//               {formStatus === "success" ? (
+//                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="h-64 flex flex-col items-center justify-center text-center">
+//                   <CheckCircle2 className="w-16 h-16 text-green-600 mb-4" />
+//                   <h4 className="text-xl font-bold text-gray-900">Inquiry Sent!</h4>
+//                   <p className="text-gray-500">We will get back to you shortly.</p>
+//                 </motion.div>
+//               ) : (
+//                 <form onSubmit={handleFormSubmit} className="space-y-4 md:space-y-5">
+//                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+//                     <div className="space-y-2">
+//                       <Label htmlFor="name">Name</Label>
+//                       <Input id="name" required placeholder="Your Name" className="bg-slate-50 border-slate-200 h-12 focus:ring-[#a7150b] rounded-xl" />
+//                     </div>
+//                     <div className="space-y-2">
+//                       <Label htmlFor="phone">Phone</Label>
+//                       <Input id="phone" type="tel" required placeholder="+91..." className="bg-slate-50 border-slate-200 h-12 focus:ring-[#a7150b] rounded-xl" />
+//                     </div>
+//                   </div>
+                  
+//                   <div className="space-y-2">
+//                     <Label htmlFor="email">Email</Label>
+//                     <Input id="email" type="email" required placeholder="email@example.com" className="bg-slate-50 border-slate-200 h-12 focus:ring-[#a7150b] rounded-xl" />
+//                   </div>
+
+//                   <div className="space-y-2">
+//                     <Label htmlFor="subject">Subject</Label>
+//                     <Select>
+//                       <SelectTrigger className="bg-slate-50 border-slate-200 h-12 rounded-xl"><SelectValue placeholder="Select Topic" /></SelectTrigger>
+//                       <SelectContent>
+//                         <SelectItem value="pooja">Pooja & Rituals</SelectItem>
+//                         <SelectItem value="education">Education / Admission</SelectItem>
+//                         <SelectItem value="medical">Medical Services</SelectItem>
+//                         <SelectItem value="donation">Donation / Corpus Fund</SelectItem>
+//                       </SelectContent>
+//                     </Select>
+//                   </div>
+                  
+//                   <div className="space-y-2">
+//                     <Label htmlFor="message">Message</Label>
+//                     <Textarea id="message" placeholder="Your message..." className="bg-slate-50 border-slate-200 resize-none focus:ring-[#a7150b] rounded-xl" rows={3} />
+//                   </div>
+                  
+//                   <Button type="submit" disabled={formStatus === "submitting"} className="w-full bg-[#ffc107] text-black font-bold h-12 text-lg rounded-xl shadow-md hover:bg-[#e6ac00]">
+//                     {formStatus === "submitting" ? "Sending..." : "Submit Message"}
+//                   </Button>
+//                 </form>
+//               )}
+//             </div>
+
+//             {/* Info Side */}
+//             <div className="md:col-span-2 bg-[#1a1a1a] p-6 md:p-12 text-white flex flex-col justify-between relative overflow-hidden">
+//               <div className="absolute top-0 right-0 p-6 opacity-5 pointer-events-none">
+//                 <Building2 size={150} className="md:w-[200px] md:h-[200px]" />
+//               </div>
+              
+//               <div className="relative z-10">
+//                 <h4 className="text-lg md:text-xl font-bold mb-6 text-[#ffc107] ">
+//                   Address & Contact
+//                 </h4>
+//                 <div className="space-y-6">
+//                   <div className="flex items-start gap-4">
+//                     <Mail className="w-5 h-5 md:w-6 md:h-6 text-[#ffc107] shrink-0 mt-1" />
+//                     <div>
+//                       <p className="text-xs text-gray-400 uppercase tracking-wider">
+//                         Email Us
+//                       </p>
+//                       <p className="font-medium text-sm break-all text-gray-300">
+//                         masm@omsakthiamma.org
+//                       </p>
+//                     </div>
+//                   </div>               
+//                   <div className="flex items-start gap-4">
+//                     <Phone className="w-5 h-5 md:w-6 md:h-6 text-[#ffc107] shrink-0 mt-1" />
+//                     <div>
+//                       <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
+//                         Call Us
+//                       </p>
+//                       <div className="space-y-1 text-sm font-medium">
+//                         <p className="text-gray-300">Landline: +91 44 2752 9313</p>
+//                       </div>
+//                     </div>
+//                   </div>
+//                   <div className="flex items-start gap-4">
+//                     <Building2 className="w-5 h-5 md:w-6 md:h-6 text-[#ffc107] shrink-0 mt-1" />
+//                     <div>
+//                       <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
+//                         Visit Us
+//                       </p>
+//                       <p className="font-medium text-sm leading-relaxed text-gray-300">
+//                         <span className="font-bold block mb-1">
+//                           Adhiparasakthi Siddhar Peedam
+//                         </span>
+//                         Melmaruvathur, Chengalpet District,<br/>
+//                         TamilNadu-603319, India
+//                       </p>
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </Card>
+//       </div>
+//     </section>
+//   )
+// }
+
 function ContactForm() {
   const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success">("idle")
+  const [subject, setSubject] = useState("")
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setFormStatus("submitting")
-    setTimeout(() => {
-      setFormStatus("success")
-    }, 1500)
+
+    const form = e.currentTarget
+    const formData = new FormData(form)
+
+    try {
+      const response = await fetch("https://formspree.io/f/mbdarayj", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+
+      if (response.ok) {
+        setFormStatus("success")
+        form.reset()
+        setSubject("")
+      } else {
+        setFormStatus("idle")
+        alert("Something went wrong!")
+      }
+    } catch (error) {
+      console.error(error)
+      setFormStatus("idle")
+      alert("Network error!")
+    }
   }
 
   return (
@@ -491,56 +668,102 @@ function ContactForm() {
       <div className="container mx-auto max-w-5xl relative z-10">
         <Card className="border-none shadow-2xl rounded-3xl overflow-hidden bg-white">
           <div className="grid grid-cols-1 md:grid-cols-5">
+            
             {/* Form Side */}
             <div className="md:col-span-3 p-6 md:p-12">
               <div className="mb-6 md:mb-8">
-                <h3 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 tracking-tight">Contact Us</h3>
-                <p className="text-sm md:text-base text-gray-500 mt-2">Reach out for information on rituals, education, or donations.</p>
+                <h3 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 tracking-tight">
+                  Contact Us
+                </h3>
+                <p className="text-sm md:text-base text-gray-500 mt-2">
+                  Reach out for information on rituals, education, or donations.
+                </p>
               </div>
 
               {formStatus === "success" ? (
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="h-64 flex flex-col items-center justify-center text-center">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="h-64 flex flex-col items-center justify-center text-center"
+                >
                   <CheckCircle2 className="w-16 h-16 text-green-600 mb-4" />
                   <h4 className="text-xl font-bold text-gray-900">Inquiry Sent!</h4>
                   <p className="text-gray-500">We will get back to you shortly.</p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleFormSubmit} className="space-y-4 md:space-y-5">
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="name">Name</Label>
-                      <Input id="name" required placeholder="Your Name" className="bg-slate-50 border-slate-200 h-12 focus:ring-[#a7150b] rounded-xl" />
+                      <Input
+                        id="name"
+                        name="name"
+                        required
+                        placeholder="Your Name"
+                        className="bg-slate-50 border-slate-200 h-12 focus:ring-[#a7150b] rounded-xl"
+                      />
                     </div>
+
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone</Label>
-                      <Input id="phone" type="tel" required placeholder="+91..." className="bg-slate-50 border-slate-200 h-12 focus:ring-[#a7150b] rounded-xl" />
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        required
+                        placeholder="+91..."
+                        className="bg-slate-50 border-slate-200 h-12 focus:ring-[#a7150b] rounded-xl"
+                      />
                     </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" required placeholder="email@example.com" className="bg-slate-50 border-slate-200 h-12 focus:ring-[#a7150b] rounded-xl" />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Subject</Label>
-                    <Select>
-                      <SelectTrigger className="bg-slate-50 border-slate-200 h-12 rounded-xl"><SelectValue placeholder="Select Topic" /></SelectTrigger>
+                    <Label htmlFor="email">Email</Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      placeholder="email@example.com"
+                      className="bg-slate-50 border-slate-200 h-12 focus:ring-[#a7150b] rounded-xl"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label>Subject</Label>
+                    <Select onValueChange={setSubject}>
+                      <SelectTrigger className="bg-slate-50 border-slate-200 h-12 rounded-xl">
+                        <SelectValue placeholder="Select Topic" />
+                      </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="pooja">Pooja & Rituals</SelectItem>
-                        <SelectItem value="education">Education / Admission</SelectItem>
-                        <SelectItem value="medical">Medical Services</SelectItem>
-                        <SelectItem value="donation">Donation / Corpus Fund</SelectItem>
+                        <SelectItem value="Pooja & Rituals">Pooja & Rituals</SelectItem>
+                        <SelectItem value="Education / Admission">Education / Admission</SelectItem>
+                        <SelectItem value="Medical Services">Medical Services</SelectItem>
+                        <SelectItem value="Donation / Corpus Fund">Donation / Corpus Fund</SelectItem>
                       </SelectContent>
                     </Select>
+
+                    {/* Hidden input for Formspree */}
+                    <input type="hidden" name="subject" value={subject} />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" placeholder="Your message..." className="bg-slate-50 border-slate-200 resize-none focus:ring-[#a7150b] rounded-xl" rows={3} />
+                    <Textarea
+                      id="message"
+                      name="message"
+                      placeholder="Your message..."
+                      rows={3}
+                      className="bg-slate-50 border-slate-200 resize-none focus:ring-[#a7150b] rounded-xl"
+                    />
                   </div>
-                  
-                  <Button type="submit" disabled={formStatus === "submitting"} className="w-full bg-[#ffc107] text-black font-bold h-12 text-lg rounded-xl shadow-md hover:bg-[#e6ac00]">
+
+                  <Button
+                    type="submit"
+                    disabled={formStatus === "submitting"}
+                    className="w-full bg-[#ffc107] text-black font-bold h-12 text-lg rounded-xl shadow-md hover:bg-[#e6ac00]"
+                  >
                     {formStatus === "submitting" ? "Sending..." : "Submit Message"}
                   </Button>
                 </form>
@@ -552,52 +775,51 @@ function ContactForm() {
               <div className="absolute top-0 right-0 p-6 opacity-5 pointer-events-none">
                 <Building2 size={150} className="md:w-[200px] md:h-[200px]" />
               </div>
-              
+
               <div className="relative z-10">
-                <h4 className="text-lg md:text-xl font-bold mb-6 text-[#ffc107] ">
+                <h4 className="text-lg md:text-xl font-bold mb-6 text-[#ffc107]">
                   Address & Contact
                 </h4>
+
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <Mail className="w-5 h-5 md:w-6 md:h-6 text-[#ffc107] shrink-0 mt-1" />
+                    <Mail className="w-6 h-6 text-[#ffc107]" />
                     <div>
-                      <p className="text-xs text-gray-400 uppercase tracking-wider">
-                        Email Us
-                      </p>
-                      <p className="font-medium text-sm break-all text-gray-300">
+                      <p className="text-xs text-gray-400 uppercase">Email Us</p>
+                      <p className="font-medium text-sm text-gray-300 break-all">
                         masm@omsakthiamma.org
                       </p>
                     </div>
-                  </div>               
+                  </div>
+
                   <div className="flex items-start gap-4">
-                    <Phone className="w-5 h-5 md:w-6 md:h-6 text-[#ffc107] shrink-0 mt-1" />
+                    <Phone className="w-6 h-6 text-[#ffc107]" />
                     <div>
-                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
-                        Call Us
+                      <p className="text-xs text-gray-400 uppercase">Call Us</p>
+                      <p className="text-sm font-medium text-gray-300">
+                        Landline: +91 44 2752 9313
                       </p>
-                      <div className="space-y-1 text-sm font-medium">
-                        <p className="text-gray-300">Landline: +91 44 2752 9313</p>
-                      </div>
                     </div>
                   </div>
+
                   <div className="flex items-start gap-4">
-                    <Building2 className="w-5 h-5 md:w-6 md:h-6 text-[#ffc107] shrink-0 mt-1" />
+                    <Building2 className="w-6 h-6 text-[#ffc107]" />
                     <div>
-                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
-                        Visit Us
-                      </p>
-                      <p className="font-medium text-sm leading-relaxed text-gray-300">
+                      <p className="text-xs text-gray-400 uppercase">Visit Us</p>
+                      <p className="text-sm font-medium text-gray-300 leading-relaxed">
                         <span className="font-bold block mb-1">
                           Adhiparasakthi Siddhar Peedam
                         </span>
-                        Melmaruvathur, Chengalpet District,<br/>
+                        Melmaruvathur, Chengalpet District,<br />
                         TamilNadu-603319, India
                       </p>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
+
           </div>
         </Card>
       </div>
